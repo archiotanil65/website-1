@@ -1,0 +1,585 @@
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+html ,body{
+    font-family: Arial, sans-serif;
+}
+
+.header {
+  background-color: #ffffff;
+  color: #ffffff;
+  padding: 15px;
+}
+
+.nav-item a
+{
+  font-size:12px;
+  text-decoration:none;
+    word-spacing: normal;
+
+  word-spacing:5px;
+
+}
+
+.nav-item a:after {
+  display:block;
+  content: '';
+  border-bottom: solid 3px #92a8d1;  
+  transform: scaleX(0);  
+  transition: transform 800ms;
+}
+.nav-item a:hover:after {
+ transform: scaleX(1);
+ color:black;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+}
+
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 3.7rem;
+}
+
+.nav-link{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #475569;
+}
+
+.nav-link:hover{
+    color: black;
+}
+
+.nav-logo {
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: #482ff7;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin-top:3em;
+  padding: 0;
+}
+
+.main ul {
+  list-style-type: none;
+  margin-top:3em;
+  padding: 0;
+}
+
+.menu li,.main li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #ffffff;
+  color: #ffffff;
+ 
+ border-radius:20px;
+  height:auto;
+}
+
+
+.aside {
+  background-color: #33b5e5;
+  padding: 15px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.footer {
+  background-color: #0099cc;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width:auto;
+    }
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width:auto;
+    }
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 30%;padding:30px;float:right;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 70%;
+    }
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
+/*--starting the styling of the menu from bottom to top----*/
+
+#JoinBattle p ,#leaderBoard p,#myClan p
+{
+font-size:20px;
+font-weight:0;
+color:#219EBC;
+}
+
+#leaderBoard p1
+{
+color:black;
+font-size:12px;
+}
+
+#viewAll
+{
+ 
+ font-size:12px;
+ float:right;
+ margin-top:-3.1em;
+ color:#9BD3E1;
+}
+
+#battleEntries ,td,th
+{
+
+ font-size:12px;
+ color:black;
+}
+
+#difficultyLevelPlay
+{
+font-size:12px;!important
+}
+
+#status,#difficultyLevelPlay,#start,#win
+{font-family: Arial, sans-serif;}
+
+#winGems
+{
+vertical-align:top;
+margin-top:-7.8em;
+}
+
+#win{
+    margin-top: -6em;
+    margin-left: -10px;
+    vertical-align: top;
+}
+#preTag
+{
+ color:black;
+ font-weight:bold;
+}
+
+.rankingTable
+{
+background-color:#219EBC;
+padding-right:10px;
+padding-left:5px;
+border-radius:20px;
+}
+
+.rankingTable th,td
+{
+color:white;}
+
+.clanRanking th,td
+{
+color:black}
+
+.memberTable td
+{
+text-align:center;
+}
+
+#pointTable{
+margin-top:5em;}
+
+#avengers ,#avengers1{
+                float:left; 
+                width:25%;
+				text-align:center;					
+                height:auto;
+            }
+            #warriors,#warriors1{
+                float:left; 
+                width:50%;
+				text-align:center;	
+                height:auto;
+            }
+            #polo,#polo1{
+                float:right;
+	            text-align:center;
+                width:25%;
+                height:auto;
+            }
+#avengers1{
+padding-left:25px
+}
+
+#polo1{
+padding-right:20px
+}			
+#avengers1 p,#warriors1 p,#polo1 p
+{
+ text-align:center;
+ font-size:10px;
+ color:black;
+}
+
+#DailyChallenge
+{
+float:left; 
+
+                   width:90%;
+				text-align:left;					
+                height:4em;
+				background-color:#219EBC;
+				border-top-left-radius: 20px;
+								border-bottom-left-radius: 20px;
+
+}
+
+#DailyChallenge p
+{
+
+color:white;
+padding-left:10px;
+font-size:12px;
+}
+
+	
+
+#gems
+{
+float:right; 
+
+                width:10%;
+				text-align:left;					
+                height:4em;
+				background-color:#219EBC;
+				border-top-right-radius: 20px;
+				border-bottom-right-radius: 20px;
+}	
+
+#gold
+{
+float:left; 
+
+                width:25%;
+				text-align:left;					
+                height:7em;
+				
+				border-top-left-radius: 20px;
+				border-bottom-left-radius: 20px;
+}	
+
+#gold p, #diamond p
+{
+color:black;
+font-size:12px;
+font-weight:bold;
+
+}	
+
+#diamond
+{
+float:right; 
+
+                width:25%;
+				text-align:center;					
+                height:7em;
+				
+				border-top-right-radius: 20px;
+				border-bottom-right-radius: 20px;
+}	
+
+hr
+{
+height: 1px;
+    background-color: #C7C7C7;
+	border-radius:20px;
+    top: 20px;}
+
+	
+/*---------------styling of main----------------*/
+#playNow h1
+{
+font-size:25px;
+color:#FB8500;
+margin-top:20px;
+
+}
+
+#playNow p
+{
+font-size:15px;
+color:#113D52;
+}
+
+#liveMatches{
+ border: none;
+  border-collapse: collapse;
+  border-radius:20px;
+  box-shadow: 5px 0 5px -2px #888;
+  overflow-y: auto;
+  height:8em;}
+
+#liveMatches th
+{
+background-color:#FB8500;
+color:white;
+position:-webkit-sticky; 
+position:sticky; 
+top:0;
+ height:4em;
+}
+
+#difficultyLevel
+{
+text-align:left;
+font-weight:100;
+
+}
+#liveTable
+{
+height: 19em;	
+overflow-y:auto;
+}
+
+#liveTablePlay
+{
+height: auto;
+overflow-x:auto;	
+}
+
+
+
+#name
+{
+text-align:left!important;
+padding-top:15px;
+}
+
+#playerName
+{
+font-size:25px;
+}
+
+#liveMatches td
+{
+text-align:center;
+color:black;
+font-weight:bold;
+margin-top:5px;
+				
+
+}		
+
+.button {
+  background-color: #219EBC; /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  height: 3em;
+  width: 7em;
+}
+
+.button4 {border-radius: 20px;}
+
+#singlePlayer
+{	
+	float:left;
+    width: 50%;
+    height: 2.5em;
+    text-align: center;
+	border-bottom:solid 2px #219EBC;
+	border-radius:20px
+}
+
+#leagueMedal
+{
+	float:left;
+    width: 50%;
+    height: auto;
+    text-align: center;
+	
+}
+
+#leagueMessage
+{
+float:right;
+    width: 50%;
+    height: auto;
+	margin-top:5em;
+	color:#C7C7C7;
+	font-size:15px;
+    text-align: center;
+	
+}
+
+#multiPlayer
+{
+	float:right;
+    width: 50%;
+    height: 2.5em;
+    text-align: center;
+}
+
+#singlePlayer p ,#multiPlayer p
+{
+font-size:20px;
+color:black;
+margin-top:0em;
+}
+
+#battleImg
+{
+float:left;
+width:50%;
+border:solid 1px black;
+height:auto}
+
+#battleDetails
+{
+float:left;
+width:25%;
+border:solid 1px black;
+height:auto}
+#battleGems
+{
+float:right;
+width:25%;
+border:solid 1px black;
+height:auto}
+
+#nameLive
+{
+vertical-align:top;
+font-size:25px;}
+
+#textLive
+{
+font-size:15px;}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height:5px;
+}
+
+#start
+{
+text-align:center;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff; 
+  margin-top:4.2em;
+  border-radius:20px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #219EBC; 
+  border-radius:20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #219EBC; 
+  border-radius:20px;
+}
